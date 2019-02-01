@@ -25,7 +25,7 @@ public static int fibH(int n, int first, int second) {
     return second;
   }
   int third = first + second;
-  return fibH(n-2,second,third);
+  return fibH(n-1,second,third);
 }
 
 public static void main(String args[]) {
