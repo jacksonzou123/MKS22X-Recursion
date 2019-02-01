@@ -24,13 +24,14 @@ public static int fibH(int n, int first, int second) {
   if (n == 1) {
     return second;
   }
-  third = first + second;
+  int third = first + second;
   return fibH(n-2,second,third);
 }
 
 public static void main(String args[]) {
-  System.out.println(sqrt(Integer.parseInt(args[0])));
-  System.out.println(Math.sqrt(Integer.parseInt(args[0])));
+  //System.out.println(sqrt(Integer.parseInt(args[0])));
+  //System.out.println(Math.sqrt(Integer.parseInt(args[0])));
+  System.out.println(fib(Integer.parseInt(args[0])));
 }
 
 }
