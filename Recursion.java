@@ -14,6 +14,20 @@ public static double sqrtH(double n, double guess) {
   return sqrtH(n, guess);
 }
 
+public static int fib(int n) {
+  return fibH(n, 0, 1);
+}
+public static int fibH(int n, int first, int second) {
+  if (n == 0) {
+    return first;
+  }
+  if (n == 1) {
+    return second;
+  }
+  third = first + second;
+  return fibH(n-2,second,third);
+}
+
 public static void main(String args[]) {
   System.out.println(sqrt(Integer.parseInt(args[0])));
   System.out.println(Math.sqrt(Integer.parseInt(args[0])));
