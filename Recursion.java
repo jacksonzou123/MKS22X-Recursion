@@ -33,22 +33,25 @@ public static int fibH(int n, int first, int second) {
 
 public static ArrayList<Integer> makeAllSums(int n) {
   ArrayList<Integer> f = new ArrayList<>();
-  makeSumH(1, n, 0, f);
+  makeSumH(n, n, 0, f);
   return f;
 }
 
 public static void makeSumH(int index, int n, int sum, ArrayList<Integer> list) {
-  if (index > n) {
+  if (index == 0) {
     list.add(sum);
   }
-  makeSumH(index + 1, n, sum + index, list);
-  makeSumH(index + 1, n, sum, list);
+  else {
+    makeSumH(index-1, n, sum + index, list);
+    makeSumH(index-1, n, sum, list);
+  }
 }
 
 public static void main(String args[]) {
   //System.out.println(sqrt(Integer.parseInt(args[0])));
   //System.out.println(Math.sqrt(Integer.parseInt(args[0])));
-  System.out.println(fib(Integer.parseInt(args[0])));
+  //System.out.println(fib(Integer.parseInt(args[0])));
+  System.out.println(makeAllSums(Integer.parseInt(args[0])));
 }
 
 }
