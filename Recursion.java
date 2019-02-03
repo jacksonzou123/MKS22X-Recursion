@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Recursion{
   /*
 *@param n any non-negative value you want to take the sqrt of
@@ -34,7 +37,9 @@ public static ArrayList<Integer> makeAllSums(int n) {
   return f;
 }
 
-public static void makeSumH(int index, int n, int sum);
+public static void makeSumH(int index, int n, int sum) {
+
+}
 
 public static void main(String args[]) {
   //System.out.println(sqrt(Integer.parseInt(args[0])));
