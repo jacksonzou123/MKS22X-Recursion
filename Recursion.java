@@ -33,12 +33,16 @@ public static int fibH(int n, int first, int second) {
 
 public static ArrayList<Integer> makeAllSums(int n) {
   ArrayList<Integer> f = new ArrayList<>();
-  makeSumH(0, n, 0);
+  makeSumH(1, n, 0, f);
   return f;
 }
 
-public static void makeSumH(int index, int n, int sum) {
-
+public static void makeSumH(int index, int n, int sum, ArrayList<Integer> list) {
+  if (index > n) {
+    list.add(sum);
+  }
+  makeSumH(index + 1, n, sum + index, list);
+  makeSumH(index + 1, n, sum, list);
 }
 
 public static void main(String args[]) {
