@@ -28,6 +28,14 @@ public static int fibH(int n, int first, int second) {
   return fibH(n-1,second,third);
 }
 
+public static ArrayList<Integer> makeAllSums(int n) {
+  ArrayList<Integer> f = new ArrayList<>();
+  makeSumH(0, n, 0);
+  return f;
+}
+
+public static void makeSumH(int index, int n, int sum);
+
 public static void main(String args[]) {
   //System.out.println(sqrt(Integer.parseInt(args[0])));
   //System.out.println(Math.sqrt(Integer.parseInt(args[0])));
